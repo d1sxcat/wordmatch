@@ -1,9 +1,9 @@
 export type TDragData = {
-    text:string
+    text?:string
     width:number
     height:number
-    correctDirection:string
-    img?: string
+    img?:string
+    correctPosition:number
     fontSize: number
     backgroundColour: string
     fontColour: string
@@ -12,27 +12,37 @@ export type TDragData = {
     borderWidth?:number
 }
 
-export type TPlaySide = {
-    width:number
-    height:number
-    text:string
-    img?:string
-    fontSize:number
-    fontColour:string
+export type TDragArea = {
+    width?:number
+    backgroundColour: string
     border:boolean
     borderColour?:string
     borderWidth?:number
-    backgroundColour:string
 }
 
-export type TPlayArea = {
-    PlayAreaDataLeft:TPlaySide
-    PlayAreaDataRight:TPlaySide
+enum location {
+    'start',
+    'center',
+    'end'
+}
+
+export type TSubmitButton = {
+    text:string
+    width?:number
+    height:number
+    location: location
+    fontSize: number
+    backgroundColour: string
+    fontColour: string
+    border:boolean
+    borderColour?:string
+    borderWidth?:number
 }
 
 export type TGameData = {
-    PlayAreaData:TPlayArea
-    Divs:TDragData[]
+    Draggables:TDragData[]
+    SubmitButton: TSubmitButton
+    DraggableArea: TDragArea
 }
 
 export type TGameEvent = {

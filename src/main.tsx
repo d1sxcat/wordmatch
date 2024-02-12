@@ -1,3 +1,5 @@
+import './assets/Poppins-SemiBold.ttf'
+import './assets/Poppins-Regular.ttf'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'

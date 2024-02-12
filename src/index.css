@@ -7,3 +7,17 @@ html,body,#root{
   width:100%;
   overflow: hidden;
 }
+
+@font-face {
+  font-family: 'Poppins';
+  src: local('Poppins-SemiBold'),
+    url('./assets/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: local('Poppins-Regular'),
+    url('./assets/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
